@@ -194,7 +194,8 @@ nav #menu {
 	padding: 40px 0 40px 0;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 60%;
+	width: 960px;
+  height: 540px;
 }
 
 .image_G {
