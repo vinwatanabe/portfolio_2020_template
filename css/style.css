@@ -283,6 +283,10 @@ nav #menu {
 	padding-bottom: 0;
 }
 
+.grid3x3 img:nth-last-child(4){
+	padding-bottom: 0.4375em;;
+}
+
 .team {
 	font-family: 'Roboto';
 	font-size: 1.125em;
