@@ -29,6 +29,14 @@ a{
 	z-index: 999;
 }
 
+.close {
+	position: relative;
+	display: inline-block;
+	float: right;
+	padding-left: 40px;
+	cursor: pointer;
+}
+
 .links_menu {
 	position: absolute;
 	width: 60%;
@@ -52,6 +60,12 @@ a{
 	font-size: 8.125em;
 	font-weight: 900;
 	color: #fff;
+	transition: -webkit-text-stroke 0.4s, color 0.4s;
+}
+
+.links_menu a:hover {
+	color: #3B3B3B;
+	-webkit-text-stroke: 2px #fff;
 }
 
 /* Principal */
@@ -100,6 +114,7 @@ nav #menu {
 	display: inline-block;
 	float: right;
 	padding-left: 40px;
+	cursor: pointer;
 }
 
 .projects_list {
