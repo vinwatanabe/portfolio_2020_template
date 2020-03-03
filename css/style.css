@@ -186,14 +186,20 @@ nav #menu {
 .nav_buttons .bar_button {
 	cursor: pointer;
  	height: 20px;
- 	width: 2px;
+ 	width: 3px;
  	margin-left: 10px;
  	background-color: #B2B2B2;
  	display: inline-block;
+ 	transition: width 0.4s, background-color 0.4s;
+}
+
+.nav_buttons .bar_button:hover {
+	width: 6px;
+	background-color: #3B3B3B;
 }
 
 .nav_buttons .bar_button:first-child {
-	width: 4px;
+	width: 6px;
 	background-color: #3B3B3B;
 }
 
