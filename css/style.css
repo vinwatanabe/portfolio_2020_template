@@ -203,6 +203,22 @@ nav #menu {
 	background-color: #3B3B3B;
 }
 
+.slide_02 {
+	display: none;
+}
+
+.slide_03 {
+	display: none;
+}
+
+.slide_04 {
+	display: none;
+}
+
+.slide_05 {
+	display: none;
+}
+
 /* Project page */
 
 .project_header {
