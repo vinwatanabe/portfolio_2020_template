@@ -193,14 +193,18 @@ nav #menu {
  	transition: width 0.4s, background-color 0.4s;
 }
 
+.nav_buttons .active {
+	width: 6px;
+	background-color: #3B3B3B;
+}
+
 .nav_buttons .bar_button:hover {
 	width: 6px;
 	background-color: #3B3B3B;
 }
 
-.nav_buttons .bar_button:first-child {
-	width: 6px;
-	background-color: #3B3B3B;
+.slide_01 {
+	display: none;
 }
 
 .slide_02 {
