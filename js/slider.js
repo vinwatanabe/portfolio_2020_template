@@ -5,43 +5,89 @@ $(document).ready(function(){
 
 	//Slide show
 	$(".btn_01").click(function(){
-		hideAll();
 		removeActive();
 
-		$(".slide_01").show();
-		$(".btn_01").addClass("active");
+		$.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
+			$.when($(".project_text").fadeOut(300)).then(function(){
+				$.when(hideAll()).then(function(){
+					$.when($(".slide_01").fadeIn(300)).then(function(){
+						$.when($(".project_text").fadeIn(300)).then(function(){
+							$(".project_image").animate({width: "60%"}, 500);
+							$(".btn_01").addClass("active");
+						});
+					});
+				});
+			});
+		});
 	});
 
 	$(".btn_02").click(function(){
-		hideAll();
 		removeActive();
 
-		$(".slide_02").show();
-		$(".btn_02").addClass("active");
+		$.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
+			$.when($(".project_text").fadeOut(300)).then(function(){
+				$.when(hideAll()).then(function(){
+					$.when($(".slide_02").fadeIn(300)).then(function(){
+						$.when($(".project_text").fadeIn(300)).then(function(){
+							$(".project_image").animate({width: "60%"}, 500);
+							$(".btn_02").addClass("active");
+						});
+					});
+				});
+			});
+		});
 	});
 
+
 	$(".btn_03").click(function(){
-		hideAll();
 		removeActive();
 
-		$(".slide_03").show();
-		$(".btn_03").addClass("active");
+		$.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
+			$.when($(".project_text").fadeOut(300)).then(function(){
+				$.when(hideAll()).then(function(){
+					$.when($(".slide_03").fadeIn(300)).then(function(){
+						$.when($(".project_text").fadeIn(300)).then(function(){
+							$(".project_image").animate({width: "60%"}, 500);
+							$(".btn_03").addClass("active");
+						});
+					});
+				});
+			});
+		});
 	});
 
 	$(".btn_04").click(function(){
-		hideAll();
 		removeActive();
 
-		$(".slide_04").show();
-		$(".btn_04").addClass("active");
+		$.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
+			$.when($(".project_text").fadeOut(300)).then(function(){
+				$.when(hideAll()).then(function(){
+					$.when($(".slide_04").fadeIn(300)).then(function(){
+						$.when($(".project_text").fadeIn(300)).then(function(){
+							$(".project_image").animate({width: "60%"}, 500);
+							$(".btn_04").addClass("active");
+						});
+					});
+				});
+			});
+		})
 	});
 
 	$(".btn_05").click(function(){
-		hideAll();
 		removeActive();
 
-		$(".slide_05").show();
-		$(".btn_05").addClass("active");
+		$.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
+			$.when($(".project_text").fadeOut(300)).then(function(){
+				$.when(hideAll()).then(function(){
+					$.when($(".slide_05").fadeIn(300)).then(function(){
+						$.when($(".project_text").fadeIn(300)).then(function(){
+							$(".project_image").animate({width: "60%"}, 500);
+							$(".btn_05").addClass("active");
+						});
+					});
+				});
+			});
+		})
 	});
 });
 
