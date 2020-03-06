@@ -250,10 +250,13 @@ nav #menu {
 	z-index: 1;
 }
 
-.project_name {
+.project_name_project {
 	font-size: 8.125em;
 	font-weight: 900;
 	padding: 5px 0 5px 0;
+}
+
+.project_name {
 	transition: -webkit-text-stroke 0.4s, color 0.4s;
 }
 
