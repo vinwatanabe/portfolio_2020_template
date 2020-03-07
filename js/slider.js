@@ -9,6 +9,15 @@ $(document).ready(function(){
 	sliderAnimation("03");
 	sliderAnimation("04");
 	sliderAnimation("05");
+  
+  //Image mouse over CSS links
+  $(".project_image").mouseenter(function(){
+    $(".project_name").addClass("hover");
+  });
+  
+  $(".project_image").mouseleave(function(){
+    $(".project_name").removeClass("hover");
+  });
 });
 
 // Hide all images
