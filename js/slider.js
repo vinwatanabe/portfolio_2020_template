@@ -18,6 +18,9 @@ $(document).ready(function(){
   $(".project_image").mouseleave(function(){
     $(".project_name").removeClass("hover");
   });
+  
+  //Time change slider
+  timeChangeSlider();
 });
 
 // Hide all images
@@ -42,8 +45,13 @@ function removeActive(){
 function sliderAnimation(slideNumber){
 	$(".btn_" + slideNumber).click(function(){
 		removeActive();
+    
+		slideChange(slideNumber);
+	});
+}
 
-		$.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
+function slideChange(slideNumber){
+  $.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
 			$.when($(".project_text").fadeOut(300)).then(function(){
 				$.when(hideAll()).then(function(){
 					$.when($(".slide_" + slideNumber).fadeIn(300)).then(function(){
@@ -55,5 +63,22 @@ function sliderAnimation(slideNumber){
 				});
 			});
 		});
-	});
+}
+
+function timeChangeSlider(){
+  var count = 2;
+  
+  setInterval(function(){
+    var slideNum = "0" + String(count);
+    
+    slideChange(slideNum);
+    
+    removeActive();
+    
+    if(count >= 5){
+      count = 1;
+    } else {
+      count++;
+    }
+  }, 6000);
 }
