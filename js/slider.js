@@ -21,6 +21,9 @@ $(document).ready(function(){
   
   //Time change slider
   timeChangeSlider();
+
+  //Scroll slider change
+  
 });
 
 // Hide all images
@@ -80,5 +83,5 @@ function timeChangeSlider(){
     } else {
       count++;
     }
-  }, 6000);
+  }, 8000);
 }
