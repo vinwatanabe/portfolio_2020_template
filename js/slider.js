@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	// Active slide 01
-	$(".slide_01").show();
-	$(".btn_01").addClass("active");
+	openSlider();
 
 	//Slide show
 	sliderAnimation("01");
@@ -18,11 +17,6 @@ $(document).ready(function(){
   $(".project_image").mouseleave(function(){
     $(".project_name").removeClass("hover");
   });
-  
-  //Time change slider
-  timeChangeSlider();
-
-  //Scroll slider change
   
 });
 
@@ -48,7 +42,7 @@ function removeActive(){
 function sliderAnimation(slideNumber){
 	$(".btn_" + slideNumber).click(function(){
 		removeActive();
-    
+
 		slideChange(slideNumber);
 	});
 }
@@ -68,20 +62,7 @@ function slideChange(slideNumber){
 		});
 }
 
-function timeChangeSlider(){
-  var count = 2;
-  
-  setInterval(function(){
-    var slideNum = "0" + String(count);
-    
-    slideChange(slideNum);
-    
-    removeActive();
-    
-    if(count >= 5){
-      count = 1;
-    } else {
-      count++;
-    }
-  }, 8000);
+function openSlider(){
+	$(".slide_01").show();
+	$(".btn_01").addClass("active");
 }
