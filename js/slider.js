@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var currentSlide = 1;
-  var timeChange = 3000;
+  var timeChange = 6000;
   
   // Defines the initial slide
   initialSlide();
