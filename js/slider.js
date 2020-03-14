@@ -94,4 +94,43 @@ $(document).ready(function(){
       slideAnimation(slideNumber);
     }
   }
+  
+  window.onwheel = function() {changeOnScroll(event)};
+  
+  function changeOnScroll(event) {
+    var y = event.deltaY;
+    var slideNumber;
+    
+    if(y > 53){
+      if(currentSlide == 5){
+        removeActive();
+        clearInterval(timer);
+        slideAnimation("01");
+        currentSlide = 1;
+        timer = setInterval(timerFunc, timeChange)
+      } else {
+        removeActive();
+        clearInterval(timer);
+        currentSlide++;
+        slideNumber = "0" + String(currentSlide);
+        slideAnimation(slideNumber);
+        timer = setInterval(timerFunc, timeChange);
+      }
+    } else if (y < -53){
+      if(currentSlide == 1){
+        removeActive();
+        clearInterval(timer);
+        slideAnimation("05");
+        currentSlide = 5;
+        timer = setInterval(timerFunc, timeChange)
+      } else {
+        removeActive();
+        clearInterval(timer);
+        currentSlide--;
+        slideNumber = "0" + String(currentSlide);
+        slideAnimation(slideNumber);
+        timer = setInterval(timerFunc, timeChange);
+      }
+    }
+  }
 });
