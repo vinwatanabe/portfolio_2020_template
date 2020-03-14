@@ -21,6 +21,9 @@ $(document).ready(function(){
     $(".project_name").removeClass("hover");
   });
   
+  //Change slide on scroll
+  changeScroll();
+  
   // Timer change the slider
   var timer = setInterval(timerFunc, timeChange);
   
@@ -95,42 +98,45 @@ $(document).ready(function(){
     }
   }
   
-  window.onwheel = function() {changeOnScroll(event)};
-  
-  function changeOnScroll(event) {
-    var y = event.deltaY;
-    var slideNumber;
-    
-    if(y > 53){
-      if(currentSlide == 5){
-        removeActive();
-        clearInterval(timer);
-        slideAnimation("01");
-        currentSlide = 1;
-        timer = setInterval(timerFunc, timeChange)
-      } else {
-        removeActive();
-        clearInterval(timer);
-        currentSlide++;
-        slideNumber = "0" + String(currentSlide);
-        slideAnimation(slideNumber);
-        timer = setInterval(timerFunc, timeChange);
+  // Change slide on scroll with jquery-mousewheel
+  function changeScroll(){
+    $('.projects_list').on('mousewheel', function(event) {
+      console.log(event.deltaX, event.deltaY, event.deltaFactor);
+
+      if(event.deltaY < 0){
+        if(currentSlide == 5){
+          removeActive();
+          clearInterval(timer);
+          slideAnimation("01");
+          currentSlide = 1;
+          timer = setInterval(timerFunc, timeChange)
+        } else {
+          removeActive();
+          clearInterval(timer);
+          currentSlide++;
+          slideNumber = "0" + String(currentSlide);
+          slideAnimation(slideNumber);
+          timer = setInterval(timerFunc, timeChange);
+        }
+      } else if (event.deltaY > 0){
+        if(currentSlide == 1){
+          removeActive();
+          clearInterval(timer);
+          slideAnimation("05");
+          currentSlide = 5;
+          timer = setInterval(timerFunc, timeChange)
+        } else {
+          removeActive();
+          clearInterval(timer);
+          currentSlide--;
+          slideNumber = "0" + String(currentSlide);
+          slideAnimation(slideNumber);
+          timer = setInterval(timerFunc, timeChange);
+        }
       }
-    } else if (y < -53){
-      if(currentSlide == 1){
-        removeActive();
-        clearInterval(timer);
-        slideAnimation("05");
-        currentSlide = 5;
-        timer = setInterval(timerFunc, timeChange)
-      } else {
-        removeActive();
-        clearInterval(timer);
-        currentSlide--;
-        slideNumber = "0" + String(currentSlide);
-        slideAnimation(slideNumber);
-        timer = setInterval(timerFunc, timeChange);
-      }
-    }
+
+      $('.projects_list').off('mousewheel');
+      setTimeout(changeScroll ,2000);
+    });
   }
 });
