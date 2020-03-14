@@ -101,7 +101,6 @@ $(document).ready(function(){
   // Change slide on scroll with jquery-mousewheel
   function changeScroll(){
     $('.projects_list').on('mousewheel', function(event) {
-      console.log(event.deltaX, event.deltaY, event.deltaFactor);
 
       if(event.deltaY < 0){
         if(currentSlide == 5){
