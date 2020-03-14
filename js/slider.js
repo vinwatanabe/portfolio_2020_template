@@ -98,11 +98,8 @@ $(document).ready(function(){
     }
   }
   
-  // Change slide on scroll with jquery-mousewheel
-  function changeScroll(){
-    $('.projects_list').on('mousewheel', function(event) {
-
-      if(event.deltaY < 0){
+  function scrollProcessor(event){
+    if(event.deltaY < 0){
         if(currentSlide == 5){
           removeActive();
           clearInterval(timer);
@@ -133,8 +130,14 @@ $(document).ready(function(){
           timer = setInterval(timerFunc, timeChange);
         }
       }
+  }
+  
+  // Change slide on scroll with jquery-mousewheel
+  function changeScroll(){
+    $(window).on('mousewheel', function(event) {
+      scrollProcessor(event);
 
-      $('.projects_list').off('mousewheel');
+      $(window).off('mousewheel');
       setTimeout(changeScroll ,2000);
     });
   }
