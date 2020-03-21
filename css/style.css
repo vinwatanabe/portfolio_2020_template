@@ -27,6 +27,12 @@ a{
 .modal_menu .logo a {
 	color: #fff;
 	z-index: 999;
+	transition: -webkit-text-stroke 0.4s, color 0.4s;
+}
+
+.modal_menu .logo a:hover {
+	color: #3B3B3B;
+	-webkit-text-stroke: 1px #fff;
 }
 
 .close {
@@ -92,6 +98,15 @@ nav .logo {
 	font-size: 1.5625em;
 	font-weight: 900;
 	vertical-align: middle;
+}
+
+nav .logo a {
+	transition: -webkit-text-stroke 0.4s, color 0.4s;
+}
+
+nav .logo a:hover {
+	color: #fff;
+	-webkit-text-stroke: 1px #3B3B3B;
 }
 
 nav #language {
@@ -375,6 +390,15 @@ nav #menu {
 	height: auto;
 }
 
+.next_project a {
+	transition: -webkit-text-stroke 0.4s, color 0.4s;
+}
+
+.next_project a:hover {
+	color: #fff;
+	-webkit-text-stroke: 1px #3B3B3B;
+}
+
 .footer_text {
 	position: absolute;
 	top: 50%;
@@ -397,6 +421,15 @@ nav #menu {
 	padding-left: 5%;
 	margin-top: 40px;
 	width: 30%;
+}
+
+.contact a {
+	transition: -webkit-text-stroke 0.4s, color 0.4s;
+}
+
+.contact a:hover {
+	color: #fff;
+	-webkit-text-stroke: 1px #3B3B3B;
 }
 
 .about_me {
