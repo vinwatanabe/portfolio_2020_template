@@ -309,7 +309,7 @@ nav #menu {
 	left: 50%;
 	transform: translateX(-50%);
 	width: 960px;
-  	height: 540px;
+  height: 540px;
 }
 
 .image_G {
@@ -365,7 +365,6 @@ nav #menu {
 .next_project {
 	position: relative;
 	width: 100%;
-	padding-top: 40px;
 }
 
 .next_project img{
@@ -493,6 +492,10 @@ nav #menu {
 	.text_block p:first-child{
 		margin-top: 200px;
 	}
+  
+  .links_menu a {
+    font-size: 6em;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -501,14 +504,18 @@ nav #menu {
 	}
 
 	.video{
-		width: 500px;
-	  	height: 500px;
+		width: 768px;
+	  height: 432px;
 	}
 
 	.video iframe {
-		width: 500px;
-		height: 500px;
+		width: 768px;
+		height: 432px;
 	}
+  
+  .links_menu a {
+    font-size: 5em;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -531,6 +538,20 @@ nav #menu {
 	.text_block p:first-child{
 		margin-top: 160px;
 	}
+  
+  .video{
+		width: 550px;
+	  height: 309px;
+	}
+
+	.video iframe {
+		width: 550px;
+		height: 309px;
+	}
+  
+  .links_menu a {
+    font-size: 3em;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -553,6 +574,20 @@ nav #menu {
 	.text_block p:first-child{
 		margin-top: 140px;
 	}
+  
+  .video{
+		width: 320px;
+	  height: 180px;
+	}
+
+	.video iframe {
+		width: 320px;
+		height: 180px;
+	}
+  
+  .links_menu a {
+    font-size: 2.5em;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -567,4 +602,8 @@ nav #menu {
 	.project_client {
 		font-size: 18px;
 	}
+  
+  .links_menu a {
+    font-size: 1.5em;
+  }
 }
