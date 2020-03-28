@@ -69,13 +69,32 @@ $(document).ready(function(){
   }
   
   // Change slide animation
-  function slideAnimation(slideNumber){
+ /* function slideAnimation(slideNumber){
     $.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
       $.when($(".project_text").fadeOut(300)).then(function(){
         $.when(hideAll()).then(function(){
           $.when($(".slide_" + slideNumber).fadeIn(300)).then(function(){
             $.when($(".project_text").fadeIn(300)).then(function(){
               $(".project_image").animate({width: "60%"}, 500);
+              $(".btn_" + slideNumber).addClass("active");
+            });
+          });
+        });
+      });
+    });
+  }*/
+  
+  function slideAnimation(slideNumber){
+    $.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
+      $.when($(".project_text").fadeOut(300)).then(function(){
+        $.when(hideAll()).then(function(){
+          $.when($(".slide_" + slideNumber).fadeIn(300)).then(function(){
+            $.when($(".project_text").fadeIn(300)).then(function(){
+              if($(window).width() > 425){
+                $(".project_image").animate({width: "60%"}, 500);
+              } else {
+                $(".project_image").animate({width: "100%"}, 500);
+              }
               $(".btn_" + slideNumber).addClass("active");
             });
           });

@@ -651,6 +651,10 @@ nav #menu {
 		height: 180px;
 	}
   
+  .grid3x3 img {
+    width: 29%;
+  }
+  
   .links_menu a {
     font-size: 2.5em;
   }
@@ -695,5 +699,107 @@ nav #menu {
   
   .contact {
     font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  nav #language {
+    display: none;
+  }
+  
+  nav .logo {
+    font-size: 1.2em;
+  }
+  
+  .links_menu {
+    display: inline-grid;
+    grid-row-gap: 10px;
+  }
+  
+  .links_menu p:first-child {
+    margin-right: 0;
+  }
+  
+  .links_menu a{
+    font-size: 2.5em;
+  }
+  
+  .project_name_project {
+    font-size: 32px;
+  }
+  
+  .text_block {
+    text-align: center;
+  }
+  
+  .text_block p:first-child {
+    margin-top: 110px;
+  }
+  
+  .grid3x3 img {
+    width: 100%;
+  }
+  
+  .project_text .project_client {
+    line-height: 24px;
+  }
+  
+  .footer_text {
+    font-size: 1.3em;
+  }
+  
+  .contact {
+    margin-top: 20px;
+    font-size: 1em;
+  }
+  
+  .contact a {
+    margin: 0 6px;
+  }
+  
+  .about_me_title {
+    font-size: 1.5em;
+  }
+  
+  .media_images img {
+    max-width: 78px;
+  }
+  
+  .projects_list {
+    position: relative;
+    height: 50%;
+  }
+  
+  .project_image {
+    float: none;
+    clear: both;
+    height: 100%;
+    width: 100%;
+  }
+
+  .project_image img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .project_text_home {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding-left: 0;
+    width: 74%;
+    text-align: center;
+  }
+  
+  .nav_buttons {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
+  
+  .nav_buttons .btn_container {
+    padding: 0;
+    float: none;
   }
 }
