@@ -767,10 +767,13 @@ nav #menu {
   
   .projects_list {
     position: relative;
-    height: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 72%;
   }
   
   .project_image {
+  	position: relative;
     float: none;
     clear: both;
     height: 100%;
@@ -783,13 +786,15 @@ nav #menu {
   }
   
   .project_text_home {
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translate(-50%, 0);
+    position: relative;
+    display: block;
+    transform: translate(0);
     padding-left: 0;
+    padding-top: 20px;
     width: 74%;
     text-align: center;
+    top: 0;
+    margin: 0px auto;
   }
   
   .nav_buttons {

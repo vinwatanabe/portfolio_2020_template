@@ -30,6 +30,8 @@ $(document).ready(function(){
   // Set initial slide
   function initialSlide(){
     var slideNumber = "0" + String(currentSlide);
+
+    hideAll();
     
     $(".slide_" + slideNumber).show();
     $(".btn_" + slideNumber).addClass("active");
@@ -67,22 +69,6 @@ $(document).ready(function(){
     $(".slide_04").hide();
     $(".slide_05").hide();
   }
-  
-  // Change slide animation
- /* function slideAnimation(slideNumber){
-    $.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
-      $.when($(".project_text").fadeOut(300)).then(function(){
-        $.when(hideAll()).then(function(){
-          $.when($(".slide_" + slideNumber).fadeIn(300)).then(function(){
-            $.when($(".project_text").fadeIn(300)).then(function(){
-              $(".project_image").animate({width: "60%"}, 500);
-              $(".btn_" + slideNumber).addClass("active");
-            });
-          });
-        });
-      });
-    });
-  }*/
   
   function slideAnimation(slideNumber){
     $.when($(".project_image").animate({width: "1px"}, 500)).then(function(){
